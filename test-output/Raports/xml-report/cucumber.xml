@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="59.186">
+<testcase classname="Login Ornikar Ui Test" name="TC06 The user can connect his Ornikar user account by entering his valid password and email" time="29.083">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I entre a valid email...................................................passed
+And I entre a valid Password................................................passed
+Then I click on the sign-in button below the page...........................passed
+And I verify sign-in is done successfully...................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC01 The user can create his Ornikar user account by entering all valid information." time="29.442">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can create my account.................................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

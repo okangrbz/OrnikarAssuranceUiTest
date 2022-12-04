@@ -8,13 +8,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty",
-                "html:target/default-cucumber-reports.html",
-                "json:target/json-reports/cucumber.json",
-                "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failedRerun.txt"},
+                "html:test-output/Raports/default-cucumber-reports.html",
+                "json:test-output/Raports/json-reports/cucumber.json",
+                "junit:test-output/Raports/xml-report/cucumber.xml",
+                "rerun:test-output/Raports/failedRerun.txt"},
         features="src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
-        tags = "@connexionOrnikarAssuranceAuto",
+        tags = "@smokeTest",
         dryRun = false
 )
 public class runner {
