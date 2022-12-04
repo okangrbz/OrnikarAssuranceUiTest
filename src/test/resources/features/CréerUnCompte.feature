@@ -12,7 +12,8 @@ Feature: Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test
     And I use the native keyboard to enter my lastname into the nom input field
     And I use the native keyboard to enter valid date of birth in the Date de naissance input field
 
-  @PozitifScenario
+  @NonRegressionTest
+  @smokeTest
   Scenario: TC01 The user can create his Ornikar user account by entering all valid information.
     And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field
     And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field
@@ -24,7 +25,7 @@ Feature: Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test
     And I can create my account
     And I close the browser
 
-  @NS_CodePostalInvalide
+  @NonRegressionTest
   Scenario Outline: TC02 The user can't create his Ornikar user account if he enters an invalid ZIP Code.
     And I use the native keyboard to enter INVALIDE ZIP Code  in the "<Code Postale>" input field
     And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field
@@ -42,7 +43,7 @@ Feature: Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test
                    |::;:;:|
                    |323fdf::|
 
-  @NS_NumérodeTélInvalide
+  @NonRegressionTest
   Scenario Outline: TC03 The user can't create his Ornikar user account if he enters an invalid phone number.
     And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field
     And I use the native keyboard to enter INVALIDE phone number in the "<Numéro de téléphone>" input field
@@ -59,7 +60,7 @@ Feature: Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test
                     |....??./|
                     |323fdf::|
 
-  @NS_EmailInvalide
+  @NonRegressionTest
   Scenario Outline: TC04 The user can't create his Ornikar user account if he enters an invalid Email.
     And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field
     And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field
@@ -79,7 +80,7 @@ Feature: Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test
                     |dfdfdff|
 
 
-  @NS_passwordInvalide
+  @NonRegressionTest
   Scenario Outline: TC05 The user can't create his Ornikar user account if he enters an invalid password.
     And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field
     And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field

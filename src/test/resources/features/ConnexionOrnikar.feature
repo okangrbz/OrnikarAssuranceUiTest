@@ -9,7 +9,8 @@
       And I choose Ornikar
 
 
-      @PositifScenarioConnexionOrnicar
+      @NonRegressionTest
+      @smokeTest
     Scenario:  TC06 The user can connect his Ornikar user account by entering his valid password and email
       And I entre a valid email
       And I entre a valid Password
@@ -18,7 +19,7 @@
       And I close the browser
 
 
-    @Ns_EmailInvalide
+    @NonRegressionTest
    Scenario: TC07 The user cannot connect his Ornikar user account by entering an INVALID password
       And I entre a INVALID email
       And I entre a valid Password
@@ -27,7 +28,7 @@
       And I close the browser
 
 
-    @Ns_PassInvalide
+    @NonRegressionTest
     Scenario: TC08 The user cannot connect his Ornikar user account by entering an INVALID password
       And I entre a valid email
       And I entre an INVALID Password

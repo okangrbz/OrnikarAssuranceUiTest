@@ -9,7 +9,7 @@ Feature: Login OrnikarAssurance Ui Test
     And I choose OrnikarAssurance
 
 
-  @Ns_EmailInvalide
+  @NonRegressionTest
   Scenario: TC07 The user cannot connect his OrnikarAssurance user account by entering an INVALID password
     And I entre a INVALID email
     And I entre a valid Password
@@ -18,7 +18,7 @@ Feature: Login OrnikarAssurance Ui Test
     And I close the browser
 
 
-  @Ns_PassInvalide
+  @NonRegressionTest
   Scenario: TC08 The user cannot connect his OrnikarAssurance user account by entering an INVALID password
     And I entre a valid email
     And I entre an INVALID Password
