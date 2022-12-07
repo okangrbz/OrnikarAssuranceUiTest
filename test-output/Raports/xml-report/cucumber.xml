@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="59.186">
-<testcase classname="Login Ornikar Ui Test" name="TC06 The user can connect his Ornikar user account by entering his valid password and email" time="29.083">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="22" time="548.649">
+<testcase classname="Login Ornikar Ui Test" name="TC06 The user can connect his Ornikar user account by entering his valid password and email" time="30.934">
 <system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
 When I accept cookies.......................................................passed
 And I press <Connexion>.....................................................passed
@@ -12,7 +12,55 @@ And I verify sign-in is done successfully...................................pass
 And I close the browser.....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC01 The user can create his Ornikar user account by entering all valid information." time="29.442">
+<testcase classname="Login Ornikar Ui Test" name="TC07 The user cannot connect his Ornikar user account by entering an INVALID password" time="21.225">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I entre a INVALID email.................................................passed
+And I entre a valid Password................................................passed
+Then I click on the sign-in button below the page...........................passed
+And I check sign-in is done unsuccessfully..................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Ornikar Ui Test" name="TC08 The user cannot connect his Ornikar user account by entering an INVALID password" time="22.814">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I entre a valid email...................................................passed
+And I entre an INVALID Password.............................................passed
+Then I click on the sign-in button below the page...........................passed
+And I verify sign-in is done unsuccessfully.................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login OrnikarAssurance Ui Test" name="TC07 The user cannot connect his OrnikarAssurance user account by entering an INVALID password" time="19.163">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose OrnikarAssurance...............................................passed
+And I entre a INVALID email.................................................passed
+And I entre a valid Password................................................passed
+Then I click on the sign-in button below the page...........................passed
+And I check sign-in is done unsuccessfully..................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login OrnikarAssurance Ui Test" name="TC08 The user cannot connect his OrnikarAssurance user account by entering an INVALID password" time="22.31">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose OrnikarAssurance...............................................passed
+And I entre a valid email...................................................passed
+And I entre an INVALID Password.............................................passed
+Then I click on the sign-in button below the page...........................passed
+And I verify sign-in is done unsuccessfully.................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC01 The user can create his Ornikar user account by entering all valid information." time="27.235">
 <system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
 When I accept cookies.......................................................passed
 And I press <Connexion>.....................................................passed
@@ -29,6 +77,326 @@ And I tick the box <J accepte de recevoir des offres commerciales de la part d O
 And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
 Then I press to <Je m'inscris>..............................................passed
 And I can create my account.................................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC02 The user can't create his Ornikar user account if he enters an invalid ZIP Code." time="23.389">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter INVALIDE ZIP Code  in the "gfjkfjgk" input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un code postal valide>........passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC02 The user can't create his Ornikar user account if he enters an invalid ZIP Code. 2" time="23.151">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter INVALIDE ZIP Code  in the "::;:;:" input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un code postal valide>........passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC02 The user can't create his Ornikar user account if he enters an invalid ZIP Code. 3" time="23.154">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter INVALIDE ZIP Code  in the "323fdf::" input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un code postal valide>........passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC03 The user can't create his Ornikar user account if he enters an invalid phone number." time="29.396">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter INVALIDE phone number in the "dfdfdfd" input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un numéro de téléphone valide>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC03 The user can't create his Ornikar user account if he enters an invalid phone number. 2" time="26.683">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter INVALIDE phone number in the "....??./" input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un numéro de téléphone valide>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC03 The user can't create his Ornikar user account if he enters an invalid phone number. 3" time="25.399">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter INVALIDE phone number in the "323fdf::" input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un numéro de téléphone valide>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC04 The user can't create his Ornikar user account if he enters an invalid Email." time="27.573">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter INVALIDE Email in the "okangurbuz06hotmail.com" input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un email valide (ex: michael@gmail.com)>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC04 The user can't create his Ornikar user account if he enters an invalid Email. 2" time="33.475">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter INVALIDE Email in the "@hotmail.com" input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un email valide (ex: michael@gmail.com)>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC04 The user can't create his Ornikar user account if he enters an invalid Email. 3" time="30.405">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter INVALIDE Email in the "okangurbuz06@" input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un email valide (ex: michael@gmail.com)>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC04 The user can't create his Ornikar user account if he enters an invalid Email. 4" time="25.927">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter INVALIDE Email in the "okangurbuz06@hotmail" input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un email valide (ex: michael@gmail.com)>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC04 The user can't create his Ornikar user account if he enters an invalid Email. 5" time="22.227">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter INVALIDE Email in the "dfdfdff" input field.passed
+And I use the native keyboard to enter valid password in the <Mot de passe> input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I should see the message <Veuillez saisir un email valide (ex: michael@gmail.com)>..passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC05 The user can't create his Ornikar user account if he enters an invalid password." time="22.502">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter INVALIDE password in the "Acabbqaz12;" input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can't create my account...............................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC05 The user can't create his Ornikar user account if he enters an invalid password. 2" time="20.594">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter INVALIDE password in the "acabbqaz123;" input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can't create my account...............................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC05 The user can't create his Ornikar user account if he enters an invalid password. 3" time="21.999">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter INVALIDE password in the "ACABBQAZ123;" input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can't create my account...............................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC05 The user can't create his Ornikar user account if he enters an invalid password. 4" time="24.398">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter INVALIDE password in the "Acabbqazaaa;" input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can't create my account...............................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Ornikar page Assurance-Auto Connexion/Créer un compte Ui Test" name="TC05 The user can't create his Ornikar user account if he enters an invalid password. 5" time="23.187">
+<system-out><![CDATA[Given I go to the OrnikarAssurance-Auto page................................passed
+When I accept cookies.......................................................passed
+And I press <Connexion>.....................................................passed
+And I choose Ornikar........................................................passed
+And I press on <je m'inscris>...............................................passed
+And I use the native keyboard to enter my firstname into the prénom input field.passed
+And I use the native keyboard to enter my lastname into the nom input field.passed
+And I use the native keyboard to enter valid date of birth in the Date de naissance input field.passed
+And I use the native keyboard to enter valid ZIP Code  in the <Code Postale> input field.passed
+And I use the native keyboard to enter valid phone number in the <Numéro de téléphone> input field.passed
+And I use the native keyboard to enter valid Email in the <Adresse email> input field.passed
+And I use the native keyboard to enter INVALIDE password in the "cabbqazaaaa1" input field.passed
+And I tick the box <J accepte de recevoir des offres commerciales de la part d Ornikar.>.passed
+And I tick the box <J accepte et je comprends les conditions générales d utilisation et la politique de confidentialité d Ornikar.>.passed
+Then I press to <Je m'inscris>..............................................passed
+And I can't create my account...............................................passed
 And I close the browser.....................................................passed
 ]]></system-out>
 </testcase>
